@@ -12,6 +12,7 @@ BuildRequires:	libjpeg-devel
 BuildRequires:	meson >= 0.48.0
 BuildRequires:	ninja
 BuildRequires:	rpmbuild(macros) >= 1.736
+BuildRequires:	scdoc
 BuildRequires:	wayland-devel
 BuildRequires:	wayland-protocols >= 1.14
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -38,3 +39,4 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README.md
 %attr(755,root,root) %{_bindir}/grim
+%{_mandir}/man1/grim.1*
