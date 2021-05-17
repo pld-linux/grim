@@ -15,6 +15,7 @@ BuildRequires:	rpmbuild(macros) >= 1.736
 BuildRequires:	scdoc
 BuildRequires:	wayland-devel
 BuildRequires:	wayland-protocols >= 1.14
+Suggests:	slurp
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
