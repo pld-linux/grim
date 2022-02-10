@@ -1,11 +1,12 @@
 Summary:	Grab images from a Wayland compositor
 Name:		grim
 Version:	1.4.0
-Release:	1
+Release:	2
 License:	MIT
 Group:		Applications
 Source0:	https://github.com/emersion/grim/releases/download/v%{version}/%{name}-%{version}.tar.gz
 # Source0-md5:	003f029dd7b6ce5c994ed19ce46b82a3
+Patch0:		printf_format.patch
 URL:		https://wayland.emersion.fr/grim
 BuildRequires:	libjpeg-devel
 BuildRequires:	libpng-devel
@@ -24,6 +25,7 @@ Grab images from a Wayland compositor.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %meson build
