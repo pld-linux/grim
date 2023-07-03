@@ -1,12 +1,11 @@
 Summary:	Grab images from a Wayland compositor
 Name:		grim
-Version:	1.4.0
-Release:	3
+Version:	1.4.1
+Release:	1
 License:	MIT
 Group:		Applications
-Source0:	https://github.com/emersion/grim/releases/download/v%{version}/%{name}-%{version}.tar.gz
-# Source0-md5:	003f029dd7b6ce5c994ed19ce46b82a3
-Patch0:		printf_format.patch
+Source0:	https://git.sr.ht/~emersion/grim/archive/v%{version}.tar.gz
+# Source0-md5:	41f163e0d386cf57581af28f02e3deaa
 URL:		https://wayland.emersion.fr/grim
 BuildRequires:	bash-completion-devel
 BuildRequires:	fish-devel
@@ -48,8 +47,7 @@ BuildArch:	noarch
 Fish completion for grim command.
 
 %prep
-%setup -q
-%patch0 -p1
+%setup -q -n %{name}-v%{version}
 
 %build
 %meson build \
